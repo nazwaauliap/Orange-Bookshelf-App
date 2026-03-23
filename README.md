@@ -8,7 +8,7 @@ This project was created as a Dicoding Coding Camp 2026 submission for the cours
 ---
 
 ## 🌐 Live Demo
-https://nazwaauliap.github.io/orange-bookshelf-app/
+https://nazwaauliap.github.io/Orange-Bookshelf-App/
 ---
 
 ## 🚀 Main Features
