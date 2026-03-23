@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #fff7ed, #ffedd5);
+  color: #1f2937;
+}
+
+header {
+  background: linear-gradient(135deg, #fb923c, #f97316);
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+main {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px 32px;
+  display: grid;
+  gap: 20px;
+}
+
+section {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(124, 45, 18, 0.08);
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  color: #9a3412;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #7c2d12;
+}
+
+input[type='text'],
+input[type='number'] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #fdba74;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+  background-color: #fffaf5;
+}
+
+input[type='text']:focus,
+input[type='number']:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  accent-color: #f97316;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+#bookFormSubmit,
+#searchSubmit {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#bookFormSubmit {
+  background-color: #f97316;
+  color: white;
+}
+
+#bookFormSubmit:hover {
+  background-color: #ea580c;
+  transform: translateY(-1px);
+}
+
+#searchSubmit {
+  background-color: #fb923c;
+  color: white;
+}
+
+#searchSubmit:hover {
+  background-color: #f97316;
+}
+
+#incompleteBookList,
+#completeBookList {
+  display: grid;
+  gap: 16px;
+}
+
+[data-testid='bookItem'] {
+  border: 1px solid #fed7aa;
+  border-left: 6px solid #f97316;
+  border-radius: 16px;
+  padding: 16px;
+  background-color: #fff7ed;
+  transition: 0.2s;
+  box-shadow: 4px 6px 0px #fdba74;
+}
+
+[data-testid='bookItem']:hover {
+  transform: translateY(-3px) rotate(-1deg);
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.15);
+}
+
+[data-testid='bookItemTitle'] {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #9a3412;
+}
+
+[data-testid='bookItemAuthor'],
+[data-testid='bookItemYear'] {
+  margin: 4px 0;
+  color: #7c2d12;
+}
+
+[data-testid='bookItem'] > div:last-child {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+[data-testid='bookItem'] button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+[data-testid='bookItemIsCompleteButton'] {
+  background-color: #f97316;
+  color: white;
+}
+
+[data-testid='bookItemIsCompleteButton']:hover {
+  background-color: #ea580c;
+}
+
+[data-testid='bookItemDeleteButton'] {
+  background-color: #ef4444;
+  color: white;
+}
+
+[data-testid='bookItemDeleteButton']:hover {
+  background-color: #dc2626;
+}
+
+[data-testid='bookItemEditButton'] {
+  background-color: #facc15;
+  color: #78350f;
+}
+
+[data-testid='bookItemEditButton']:hover {
+  background-color: #eab308;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin: 16px auto;
+    padding: 0 12px 24px;
+  }
+
+  section {
+    padding: 16px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  [data-testid='bookItem'] > div:last-child {
+    flex-direction: column;
+  }
+
+  [data-testid='bookItem'] button {
+    width: 100%;
+  }
+}
