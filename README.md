@@ -38,22 +38,6 @@ This application uses the Web Storage API (localStorage) to store book data in t
 - Data remains available even after page refresh or browser restart
 - Books are stored as an array of objects with the following structure:
 
-💡 How to Run
-Download or clone this repository
-Open index.html in your browser
-The app is ready to use
-
-📁 Project Structure
-orange-bookshelf-app/
-├── index.html
-├── main.js
-├── style.css
-
-⚠️ Notes
-Built using pure JavaScript (no frameworks or libraries)
-Does not modify required data-testid attributes
-Focuses on DOM manipulation, event handling, and Web Storage implementation
-
 ```js
 {
   id: number,
